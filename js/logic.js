@@ -137,3 +137,12 @@ function getDefaultBoardData(id) {
         board_patterns: solved_boards[id]
     };
 }
+
+function getColorElements(){
+    let r = document.getElementById('color1');
+    let b = document.getElementById('color2');
+    let p = document.getElementById('color3');
+    let w = document.getElementById('color4');
+
+    return [r, b, p, w]
+}

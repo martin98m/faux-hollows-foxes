@@ -127,3 +127,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.item-board-footer-colors > .selectedColor{
+    border: 10px solid green;
+}

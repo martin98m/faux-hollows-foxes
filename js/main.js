@@ -22,7 +22,7 @@ function reset() {
 function resetBoard() {
     const data = getDefaultBoardData(board_number);
     displayed_board = rotateCount(rotation, data.board);
-    displayed_board_patterns = data.board_patterns.map(x=>rotateCount(rotation, x));
+    displayed_board_patterns = data.board_patterns.map(x => rotateCount(rotation, x));
     reloadBoards();
 }
 
@@ -44,12 +44,35 @@ function rotateCCW() {
 
 function changeSelectedColor(c) {
     selected_color = c;
+
+    const colors = getColorElements();
+    const co=['R','B','P','W'];
+    let i = 0;
+    colors.map(x=>{
+        x.classList = co[i]
+        i++
+    });
+
+    switch (c) {
+        case 'R':
+            colors[0].classList = "R selectedColor";
+            break
+        case 'B':
+            colors[1].classList = "B selectedColor";
+            break
+        case 'P':
+            colors[2].classList = "P selectedColor";
+            break
+        case 'X':
+            colors[3].classList = "W selectedColor";
+            break
+    }
 }
 
 function markField(idx) {
 
     let c = selected_color;
-    if(displayed_board[idx] === c)
+    if (displayed_board[idx] === c)
         c = 'W'
 
     displayed_board = displayed_board.substring(0, idx) + c + displayed_board.substring(idx + 1)
