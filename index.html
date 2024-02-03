@@ -1,49 +1,49 @@
-<html>
-    <head>
-        <style>
-            .flex-container {
-              display: flex;
-              background-color: DodgerBlue;
-              width: 570px;
-              flex-wrap: wrap;
-            }
-            
-            .flex-container > div {
-                width: 30px;
-                height: 30px;
-              margin: 10px;
-              padding: 20px;
-              font-size: 30px;
-              border: 1px solid black;
-            }
-            .R {
-                background-color: red;
-            }
-            .P {
-                background-color: purple;
-            }
-            .G {
-                background-color: gray;
-            }
-            .B {
-                background-color: aqua;
-            }
-            .W {
-                background-color: white;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-container" id="box">
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="item-board">
+            <div class="item-board-header">
+                <div id="header-table-1" class="board-display-grid">
+                </div>
+                <div id="header-table-2" class="board-display-grid">
+                </div>
+                <div id="header-table-3" class="board-display-grid">
+                </div>
+                <div id="header-table-4" class="board-display-grid">
+                </div>
+            </div>
+            <div class="middle">
+                <button onclick="rotateCCW()" style="width: 100px; height: 100px;">Rotate<br>CCW</button>
+                <div class="flex-container" id="box"></div>
+                <button onclick="rotateCW()" style="width: 100px; height: 100px;">Rotate<br>CW</button>
+            </div>
+            <div class="item-board-footer">
+                <div class="item-board-footer-colors">
+                    <div class="R" onclick="changeSelectedColor('R')">R</div>
+                    <div class="B" onclick="changeSelectedColor('B')">B</div>
+                    <div class="P" onclick="changeSelectedColor('P')">P</div>
+                    <div class="W" onclick="changeSelectedColor('X')">W</div>
+                </div>
+                <div><button onclick="resetBoard()">RESET BOARD</button>
+                    <button onclick="reset()">RESET</button>
+                    <button onclick="recommendOverlap()">RECOMMEND</button>
+                    <br>
+                    <a>Matches:</a><div id="matchCount">16</div><a>&nbsppatterns</a>
+                </div>
+            </div>
         </div>
-        <button onclick="rotateCw()">CW</button>
-        <button onclick="selectBoard(0)">1</button>
-        <button onclick="selectBoard(1)">2</button>
-        <button onclick="selectBoard(2)">3</button>
-        <button onclick="selectBoard(3)">4</button>
-        <button onclick="testing()">testing</button>
-        Matches: <div id="matchCount">16</div>
-        <script src="test.js">
-        </script>
-    </body>
+        <div id="item-board-patterns" class="item-board-patterns"></div>
+    </div>
+
+
+    <script src="board-data.js"></script>
+    <script src="logic.js"></script>
+    <script src="main.js"></script>
+</body>
+
 </html>

@@ -1,0 +1,129 @@
+body {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    background-color: wheat;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.item-board {
+    /*background-color: blue;*/
+    display: grid;
+    grid-template-rows: 1fr 3fr 1fr;
+}
+
+.item-board-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+
+.item-board-header > div {
+    width: 25%;
+    height: 100%;   
+    border: 1px solid green;
+}
+
+.item-board-patterns {
+    /*background-color: red;*/
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.grid-board-container{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+.grid-board-container>div{
+    border: 1px solid black;
+    width: 36px;
+    height: 36px;
+}
+
+.middle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.board-display-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+}
+.board-display-grid > div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    background-color: lightgray;
+}
+
+.flex-container>div {
+    width: 30px;
+    height: 30px;
+    margin: 10px;
+    padding: 20px;
+    font-size: 30px;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.R {
+    background-color: red;
+}
+
+.P {
+    background-color: purple;
+}
+
+.G {
+    background-color: gray;
+}
+
+.B {
+    background-color: aqua;
+}
+
+.W {
+    background-color: white;
+}
+
+.item-board-footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.item-board-footer-colors {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.item-board-footer-colors > div {
+    width: auto;
+    height: auto;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
