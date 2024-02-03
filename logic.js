@@ -113,8 +113,6 @@ function selectBoard(id) {
     reloadBoards()
 }
 
-
-
 function boardMatches(a, b) {
     for (let i = 0; i < 36; i++) {
         //if (a[i] == 'R' || a[i] == 'B' || a[i] == 'G' || a[i] == 'P')

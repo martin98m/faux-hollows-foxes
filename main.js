@@ -22,7 +22,7 @@ function reset() {
 function resetBoard() {
     const data = getDefaultBoardData(board_number);
     displayed_board = rotateCount(rotation, data.board);
-    displayed_board_patterns = rotateCount(rotation, data.board_patterns);
+    displayed_board_patterns = data.board_patterns.map(x=>rotateCount(rotation, x));
     reloadBoards();
 }
 
