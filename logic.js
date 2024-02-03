@@ -109,7 +109,7 @@ function displaySolvedBoards(boards) {
 function selectBoard(id) {
     board_number = id
     displayed_board = displayed_header_boards[id];
-    displayed_board_patterns = rotateCount(rotation, solved_boards[id]);
+    displayed_board_patterns = solved_boards[id].map(x=>rotateCount(rotation,x));
     reloadBoards()
 }
 
